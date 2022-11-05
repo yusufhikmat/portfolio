@@ -224,7 +224,7 @@ nav{
     color: white;
     border: none;
     border-radius: 20px;
-    ;
+
 }
 
 .btn-project::after,
@@ -460,11 +460,16 @@ footer{
             width:300px;
             
         }
+        .btn-project{
+            margin:15px 5px;
+        }
         .img-box{
             text-align: center;
         }
         footer{
             display:block;
+            padding:20px 5%;
+            text-align: center;
         
         }
      }
