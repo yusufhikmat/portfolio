@@ -39,12 +39,14 @@ nav{
     display:flex;
     width:100%;
     margin: auto;
-    background-color: rgba(250, 250, 210,0.8);
     justify-content: space-between;
     position: fixed;
     padding:10px 10%;
     z-index: 999;
    
+}
+.change-navMenuBg{
+    background-color: rgba(250, 250, 210, 0.8);
 }
 .nav-logo{
     display: flex;
@@ -80,7 +82,7 @@ nav{
 }
 .hero-content{
     display:flex;
-    margin:10% 13% 5% 17%;
+    padding:10% 13% 5% 17%;
     justify-content: space-between;
     line-height: 2rem;
 }
@@ -140,6 +142,8 @@ nav{
 }
 .about-col{
     margin-top: 5%;
+    display:flex;
+    justify-content: space-between;
 }
 .title{
     font-size: 20px;
@@ -151,7 +155,11 @@ nav{
     word-wrap: normal;
     text-align: justify;
     line-height: 1.7rem;
+    padding-left: 20%;
     
+}
+.show-more{
+    display:none;
 }
 .content{
     display:flex;
@@ -160,9 +168,14 @@ nav{
     text-align: justify;
     
 }
-
+.read-more{
+    cursor: pointer;
+}
+.about-text.show-text .show-more{
+    display:inline;
+}
 .profile2-img {
-    border-radius: 50% 25% 70% 30%;
+    border-radius: 50% 25% 50% 70%;
 }
 /**/
 .contact-fontawesome i.fa {
@@ -203,7 +216,7 @@ nav{
 }
 .project-img {
     width: 400px;
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
     box-shadow: 5px 3px 12px #000;
     transition: 1s ease;
@@ -354,6 +367,9 @@ footer{
     margin: 10% 2%;
     
 }
+.about-text {
+ padding-left: 5%;
+        }
 
 }
 @media screen and (max-width:750px){
@@ -369,6 +385,7 @@ footer{
     .project-img {
         width: 250px;
     }
+
 }
 
 @media screen and (max-width:660px) {
@@ -423,11 +440,19 @@ footer{
         height: 70%;
             width: 70%;
     }
+  
+    .about-col{
+        display: block;
+    }
     .profile2-img {
         border-radius: 50% 30%;
         height: 70%;
         width: 70%;
+
         }
+    .about-img{
+        text-align: center;
+    }
     .content{
         display:block;
         text-align: center;
