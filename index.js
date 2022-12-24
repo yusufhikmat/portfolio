@@ -21,18 +21,21 @@ function changeNavbarBg(){
 window.addEventListener('scroll', changeNavbarBg)
 /**end of change navmenu */
 
-//read more and readless of btnseefoodmenu
-const readMoreBtn = document.querySelector('.read-more');
-const aboutText= document.querySelector('.about-text');
+/** scroll */
+window.addEventListener('scroll', reveal)
+function reveal(){
+    var reveals= document.querySelectorAll('.reveal');
 
-readMoreBtn.addEventListener('click',()=>{
-    aboutText.classList.toggle('show-text');
-    if(readMoreBtn.textContent === 'REAd MORE'){
-        readMoreBtn.textContent = 'READ LESS';
-    }else{
-        readMoreBtn.textContent = 'READ MORE';
+    for(let i = 0; i < reveals.length; i++ ){
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 100;
+
+        if(revealtop < windowheight-revealpoint){
+            reveals[i].classList.add('active')
+
+        }else{
+            reveals[i].classList.remove('active')
+        }
     }
-})
-
-/**contact form */
-
+}
