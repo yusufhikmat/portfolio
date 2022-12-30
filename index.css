@@ -158,8 +158,6 @@ nav{
     
 }
 
-
-
 .fontawesome i.fa{
     font-size: 30px;
     padding:20px 0px;
@@ -254,39 +252,51 @@ nav{
     margin-top: 50px
 }
 .project-portfolio {
-    height: 400px;
+    position: relative;
     width: 300px;
+    height: 400px;
     box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
-    transition: 1s ease;
     border-radius: 10px;
-    transform-style: preserve-3d;
-    transform: translateZ(40px);
+    
 }
-
-.portfolio-text{
-    margin:30px 0px;
-    font-size: 16px;
-    transform-style: preserve-3d;
-    transform: translateZ(40px);
+.img-box{
+    position:relative;
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+}
+.img-box:hover .overlay{
+    width:300px;
+}
+.overlay{
+    width: 0px;
+    height: 250px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    top:0;
+    overflow: hidden;
+    color:white;
+    display:flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.overlay p{
+right: 20px;
+}
+.project-description{
+    padding:10px 10px 15px;
 }
 .project-img {
     width: 300px;
     height: 250px;
     object-fit: cover;
-    transform-style: preserve-3d;
-    transform: translateZ(40px);
-}
-
-.project-portfolio:hover{
-    transform: scale(1.1);
-    z-index: 2;
-
+ 
 }
 
 .btn-project{
-    padding: 10px 20px;
-    margin: 30px 10px;
-    font-size: 16px;
+    padding: 10px;
+    margin:10px;
+    font-size: 14px;
     background-color: #E4E9FD;
     border: none;
     border-radius: 20px;
@@ -360,16 +370,14 @@ textarea:hover{
 }
 /*footer*/
 footer{
-    margin-bottom: 0;
+   
     background-color: #A683E3;
-    height: 100px;
     display:flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
     text-align: center;
    width: 100%;
-    bottom:0;
+   
 }
 .footer-links{
     display:flex;
@@ -440,8 +448,8 @@ footer{
     margin-top: 50px;
 }
 .about-text {
- padding-left: 5%;
-        }
+    padding-left: 5%;
+}
 
 }
 @media screen and (max-width:750px){
@@ -547,13 +555,21 @@ footer{
         width:250px;
        
     }
+    .img-box{ 
+    width: 250px;
+   
+}
+.img-box:hover .overlay {
+    width: 250px;
+}
+
     .btn-project{
         padding: 10px;
         margin: 20px 5px 0px 10px;
         font-size: 14px;
        }
-    
-     @media screen and (max-width:450px){
+}
+     @media screen and (max-width:550px){
         .hero-content{
             flex-direction: column-reverse;
         }
@@ -562,16 +578,27 @@ footer{
         }
        .project{
         display: block;
-       margin:5%;
+        margin:7% 3%;
        }
-       .project-portfolio{
-        width:350px;
+       .portfolio{
+        margin-bottom: 15%;
        }
-        .project-img{
-            width:350px;
-            
+       .project-portfolio {
+             width: 300px;
+             margin: 20% auto;
+             
+       }
+        .project-img {
+             width: 300px;
+            object-fit: cover;
         }
-        
+         .img-box{ 
+    width: 300px;
+   
+    }
+    .img-box:hover .overlay {
+        width: 300px;
+    }
         footer{
             display:block;
             padding:20px 5%;
@@ -579,4 +606,3 @@ footer{
         
         }
      }
-}
