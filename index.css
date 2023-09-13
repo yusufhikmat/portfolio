@@ -96,7 +96,7 @@ nav{
     justify-content: space-between;
     line-height: 2rem;
     color:#F9E0BB;
-    padding:10%;
+    padding:12% 10%;
     align-items: center;
    
 }
@@ -116,7 +116,7 @@ nav{
     animation: slideLeft .5s ease forwards;
     animation-delay: calc(.2s * var(--1));
 }
- .hero-img, .about-img{
+ .hero-img{
     display: flex;
     justify-content: center;
     width:100%;
@@ -124,9 +124,9 @@ nav{
 
 .hero-img img {
     border: 2px solid #F9E0BB;
-    width: 300px;
+    width: 350px;
     height: 350px;
-    object-fit: fill;
+    object-fit: cover;
     transition: .5s;
     opacity: 0;
     animation:2s slideBottom .5s forwards;
@@ -164,11 +164,14 @@ nav{
 }
 .fontawesome{
    display: flex;
-
+    padding-top: 10px;
 }
 .fontawesome-icon{
     padding-right: 30px;
-    font-size: 5.2rem;
+    
+}
+.fontawesome-icon i.fa{
+    font-size: 1.4rem;
 }
     @keyframes slideRight {
         0% {
@@ -216,7 +219,8 @@ nav{
 .about-container{
     background-color: #F2E8C6;
     color:#6C3428;
-}
+   }
+
 .about{   
     padding:6% 12% 5%;
 }
@@ -233,6 +237,15 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
+}
+.about-img{
+    width:100%;
+}
+.profile2-img{
+    width:350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .title{
     font-size: 20px;
@@ -261,13 +274,6 @@ nav{
     padding-top: 30px;
     text-align: justify;
     
-}
-
-.profile2-img {
-    height:300px;
-    width: 250px;
-    object-fit: cover;
-    border-radius: 10px;
 }
 /**/
 
@@ -420,22 +426,22 @@ nav{
 .path-6{animation: animate-path6 1s 1s linear forwards;}
 
 @keyframes animate-path1{
-    100%{stroke-dashoffset: 270;;}
+    100%{stroke-dashoffset: 50;;}
 } 
 @keyframes animate-path2{
-    100%{stroke-dashoffset: 150;;}
+    100%{stroke-dashoffset: 50;;}
 }
 @keyframes animate-path3{
     100%{stroke-dashoffset: 125;;}
 }
 @keyframes animate-path4{
-    100%{stroke-dashoffset: 50;;}
+    100%{stroke-dashoffset: 150;;}
 }
 @keyframes animate-path5{
     100%{stroke-dashoffset: 180;;}
 }
 @keyframes animate-path6{
-    100%{stroke-dashoffset: 90;;}
+    100%{stroke-dashoffset: 50;;}
 }   
 .percentage{
     position: absolute;
@@ -472,6 +478,7 @@ nav{
     flex-wrap: wrap;
     align-items: center;
     row-gap: 2rem;
+    margin-top: 5%;
 }
 .card{
     position: relative;
@@ -595,7 +602,7 @@ footer{
 }
 .reveal {
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(150px);
     opacity: 0.5;
     transition: all 2s ease;
 }
@@ -672,6 +679,9 @@ footer{
     }
     .hero-img, .about-img{
         margin-bottom: 10%;
+    }
+    .about-img{
+       display: none; 
     }
     .about-col{
         flex-direction: column;
