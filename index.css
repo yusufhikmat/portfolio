@@ -171,7 +171,7 @@ nav{
     
 }
 .fontawesome-icon i.fa{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
     @keyframes slideRight {
         0% {
@@ -467,23 +467,23 @@ nav{
 
 /*project*/
 .portfolio-container{
-    padding:5% 8%;
+    padding:5%;
     perspective: 1000px;
     transform-style: preserve-3d;
     background-color: #E2C799;
 }
 .project{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    row-gap: 2rem;
+    gap:2rem 1rem;
     margin-top: 5%;
 }
 .card{
     position: relative;
-    width:300px;
-    height: 350px;
+    width:280px;
+    height: 300px;
     perspective: 1000px;
     
 }
@@ -534,6 +534,14 @@ nav{
 .desc{
     text-align: justify;
 }
+.desc-size{
+    font-size: 0.8rem;
+}
+.btn-card{
+    background-color: #99681e;
+    padding: 10px;
+    border-radius: 10px;
+}
 /*contact*/
 .contact{
     background-color: #99681e;
@@ -543,7 +551,18 @@ nav{
     font-size: 25px;
     padding-left: 10px;
 }
-.fontawesome-contact h4{
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+}
+.font-icons{
+    display: flex;
+    flex-direction: row;
+}
+/* .fontawesome-contact h4{
     text-align: start;
 }
 .contact-fontawesome i.fa{
@@ -564,7 +583,7 @@ textarea:hover{
     background-color: #99681e;
     padding:10px 20px;
     border-radius: 5px;
-}
+} */
 /*scroll*/
 .scroll-top{
     position: fixed;
@@ -680,6 +699,7 @@ footer{
     .hero-img, .about-img{
         margin-bottom: 10%;
     }
+
     .about-img{
        display: none; 
     }
@@ -705,5 +725,9 @@ footer{
 @media screen  and (max-width:450px){
     .hero-img{
         margin-top: 15%;
+    }
+    .hero-img img{
+        height: 250px;
+        width:250px;
     }
 }
